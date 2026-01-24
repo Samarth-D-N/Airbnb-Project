@@ -52,5 +52,5 @@ This project was built as a learning-oriented but production-structured applicat
 
 ---
 
-## 📂 Project Structure
+
 

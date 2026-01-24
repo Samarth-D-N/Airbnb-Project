@@ -1,5 +1,5 @@
 {
-  "engines":{
+  "engines": {
     "node": "22.17.1"
   },
   "name": "majorproject-airbnb",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cloudinary": "^2.9.0",
+    "cloudinary": "^1.41.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
     "dotenv": "^17.2.3",

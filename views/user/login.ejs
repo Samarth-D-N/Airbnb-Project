@@ -1,0 +1,35 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <br>
+            <h2>Login to Airbnb:</h2>
+            <form method="post" action="/login" novalidate class="needs-validation mt-3">
+                <div class="mb-4">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control" name="username"
+                        placeholder="Enter Your Username" required>
+                    <div class="valid-feedback">
+                        Username Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a username!
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" name="password"
+                        placeholder="Enter Your Password" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a password!
+                    </div>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-dark add-list-btn">login</button>
+                </div>
+            </form>
+        </div>
+    </div>

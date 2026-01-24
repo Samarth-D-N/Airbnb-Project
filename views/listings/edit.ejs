@@ -1,0 +1,87 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <br>
+                <h2>You can edit here</h2>
+                <form method="post" action="/listings/<%= editlist._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" id="title" class="form-control" value="<%=editlist.title%>"
+                            name="listing[title]" placeholder="Enter Your Title"required>
+                        <div class="valid-feedback">
+                            Title Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter a valid title!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="4" name="listing[description]"
+                            placeholder="Enter Your Description" required><%=editlist.description%>"</textarea>
+                                                    <div class="valid-feedback">
+                            Description Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter a valid description!
+                        </div>
+                    </div>
+
+                    <!-- <div class="mb-3 smallImageEdit">
+                        Orginial Listing Image <br>
+                        <img src=" originalImageUrl">
+                    </div> -->
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload New Image</label>
+                        <input type="file" id="image" class="form-control" 
+                            placeholder="Enter Your Url/Link of Image" name="listing[image]" >
+                            <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input id="price" class="form-control" type="number" value="<%=editlist.price%>"
+                                placeholder="Enter Your Price of Hotel" name="listing[price]"required>
+                            <div class="invalid-feedback">
+                                Please enter a valid price!
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" id="country" class="form-control" value="<%=editlist.country%>"
+                                placeholder="Enter Your Country" name="listing[country]"required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please enter a valid country!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" id="location" class="form-control" value="<%=editlist.location%>"
+                            placeholder="Enter Your Location" name="listing[location]"required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter a valid location!
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-dark add-list-btn">Update!!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
